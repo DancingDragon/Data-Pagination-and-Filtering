@@ -53,7 +53,7 @@ function addPagination(list) {
 	let linkList = document.querySelector("ul.link-list");
 	linkList.innerHTML = "";
 	
-	//Add all the page buttons
+	//Add all the page buttons to the linkList
 	for (let i = 1; i <= nrBtnsNeeded; i++) {
 		linkList.insertAdjacentHTML("beforeend", 
 			`<li>
@@ -63,6 +63,7 @@ function addPagination(list) {
 	
 	//Add clickevent to the buttons
 	linkList.addEventListener("click", (e) => {
+		//Make sure the object clicked is a button
 		if (e.target.type==="button") {
 			document.querySelector(".active").className="";
 		}
