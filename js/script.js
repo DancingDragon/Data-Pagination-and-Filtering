@@ -66,9 +66,9 @@ function addPagination(list) {
 		//Make sure the object clicked is a button
 		if (e.target.type==="button") {
 			document.querySelector(".active").className="";
+			e.target.className="active";
+			showPage(list, parseInt(e.target.textContent));
 		}
-		e.target.className="active";
-		showPage(list, parseInt(e.target.textContent));
 	}); 
 }
 
